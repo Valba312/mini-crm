@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.card {
+  @apply rounded-2xl bg-white/5 border border-white/10 p-5 shadow-lg shadow-black/20;
+}
+
+.table-base {
+  @apply w-full text-left text-sm;
+}
+
+.table-base th {
+  @apply text-xs uppercase tracking-wider text-white/60 font-semibold pb-2;
+}
+
+.table-base td {
+  @apply py-2 border-t border-white/10;
+}
+
+.badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold;
+}
+
+.input-base {
+  @apply w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white;
+}
+
+.select-base {
+  @apply w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white;
+}
+
+.btn-primary {
+  @apply rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950;
+}
+
+.btn-ghost {
+  @apply rounded-full border border-white/10 px-3 py-1 text-xs text-white/70 hover:text-white;
+}
+
+.control-pill {
+  @apply rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white;
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-white/70;
+}
+
+select,
+option {
+  background-color: #0b1120;
+  color: #e2e8f0;
+}
+
+select:focus {
+  outline: 2px solid rgba(56, 189, 248, 0.4);
+  outline-offset: 2px;
+}
+
+.active-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.active-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+  transform: translateX(-120%);
+  animation: line-sweep 2.8s ease-in-out infinite;
+}
+
+@keyframes line-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
